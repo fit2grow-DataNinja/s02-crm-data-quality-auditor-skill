@@ -13,15 +13,15 @@ Use a ChatGPT Skill to orchestrate deterministic Python CRM auditing and AI expl
 ## Evidence and limitations
 - Earlier synthetic audit/parity exercises reported **202 contacts, 121 deals, 92 medium missing-deal-owner findings**, with issue-level parity and matching results in two ChatGPT conversations.
 - The header-only three-template execution was reported successful: zero records and issues, all outputs created, partial-reference association coverage.
-- Previous local regression-suite execution was reported as **17 tests passed, 0 failures/errors**. The new GitHub checkout has **not** been independently executed in a clean environment; see [validation](docs/validation.md).
-- Multi-user installation, sharing, version alignment, and independent reproducibility are **untested**. AI explanation fidelity is not guaranteed by Skill instructions.
+- Previous local regression-suite execution was reported as **17 tests passed, 0 failures/errors**. The owner subsequently **confirmed successful execution of the regression suite from a fresh Variant 2 GitHub checkout** (2026-11-08). This is user-reported completion, not an assistant-observed run; the exact fresh-checkout log, environment and commit SHA were not supplied. See [validation](docs/validation.md).
+- Multi-user installation, sharing, version alignment, and independently captured fresh-checkout evidence remain **untested or unrecorded**. AI explanation fidelity is not guaranteed by Skill instructions.
 - SEC-001 sensitivity and approval enforcement are **not implemented**. No real customer CRM data or production claims.
 
 ## MVP boundary and deferred work
 Equivalent business-rule and reporting scope to Variant 1, with architecture-specific integration: FastAPI/Open WebUI/Podman versus ChatGPT Skill/Python. Comprehensive freshness, close-date reconciliation, missing-association inference from partial exports, customer-specific rule expansion, GitHub CI, load tests, hardened deployment, scheduled audits, notifications, and commercial readiness are deferred. Multi-user capability is a **comparison criterion**, not a required successful multi-user deployment for portfolio MVP acceptance.
 
 ## Next tiny action
-Run `python3 -m unittest discover -s tests -v` from a **fresh Variant 2 repository checkout** and record the actual result, environment, and limitations. Do not infer a pass from committed code alone.
+Continue the GitHub documentation review, then create ChatGPT-facing Skill user/execution documentation covering synthetic input preparation, invocation, result interpretation, errors and limitations. Fresh-checkout regression execution is user-confirmed; preserve the absence of raw logs as an evidence limitation.
 
 ## References
 - [Definition of done](docs/definition-of-done.md)
