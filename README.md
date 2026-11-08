@@ -15,7 +15,7 @@ No real CRM data, live CRM connection/write, SEC-001 enforcement, complete fresh
 ## Project docs
 - [Project status](PROJECT-STATUS.md) and [validation](docs/validation.md)
 - [Specification](docs/service-specification.md), [architecture](docs/architecture.md), and [definition of done](docs/definition-of-done.md)
-- [Skill integration](docs/integration.md) and [installation/distribution](docs/deployment.md) (older setup notes require revision)
+- [ChatGPT user and execution guide](docs/chatgpt-skill-user-guide.md), [Skill integration](docs/integration.md), and [installation/distribution](docs/deployment.md)
 - [Security](docs/security.md), [decisions](docs/decisions.md), and [future/commercial backlog](docs/future-improvements-and-commercial-readiness.md)
 - [Variant comparison](docs/variant-comparison.md), including unverified multi-user consistency
 
