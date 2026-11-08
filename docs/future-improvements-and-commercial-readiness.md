@@ -30,7 +30,7 @@ Do not treat proposed functionality as implemented, or a passing MVP test as com
 
 | Candidate | Intended value | Lightweight implementation principle | Acceptance evidence needed |
 | --- | --- | --- | --- |
-| Automated regression tests | Preserve deterministic behavior and reproducibility | Test current Python rules and CLI with synthetic fixtures in CI | Passing unit/integration and negative-path tests |
+| GitHub CI regression automation | Run existing Python tests on code changes; **deferred beyond portfolio MVP, as in Variant 1** | Minimal GitHub Actions workflow using standard-library unittest | Passing clean-checkout CI run and maintained workflow |
 | Versioned configurable business rules | Adapt rules, stages, severities and thresholds to a customer | Small validated configuration file; explicit defaults; no arbitrary executable rules | Repeatable tests showing rule changes and explainable outcomes |
 | Structured, actionable issue register | Make findings easy to identify, review and resolve | Stable issue IDs, record references, rule ID, severity, evidence, run timestamp, reviewer state; simple export first | Sample review workflow tested with synthetic cases |
 | Scheduled rule-based execution | Detect issues regularly (e.g. daily) | Prefer a minimal scheduler and repeatable batch execution over a heavyweight orchestration platform | Reliable repeated synthetic runs, failure reporting, rerun behavior |
@@ -76,11 +76,13 @@ Commercial release requires evidence for the applicable gates; a roadmap entry o
 
 ## Current gaps and evidence boundaries
 
-- Working installed Skill implementation has not yet been committed to the Variant 2 repository.
-- Automated unit and integration tests are missing.
-- Multi-user installation, reproducibility, packaging and release procedures remain untested or undocumented.
+**Scope parity:** Variant 1 and Variant 2 target the same synthetic CRM audit business rules, record-level outputs, and coverage disclosures. Variant 1's FastAPI/Open WebUI/Podman integration and Variant 2's Skill/Python runtime have different technical validation needs. Neither variant requires GitHub CI, production hardening, comprehensive freshness/close-date reconciliation, or full association completeness inference for portfolio MVP acceptance.
+
+- The installed Skill implementation (instructions, Python scripts, agent metadata, icon) and three header-only templates have been committed to the Variant 2 repository.
+- Synthetic unit/regression tests are committed (17 cases across header-only and rule/CLI coverage); a prior local 17-test pass was reported. Independent fresh-checkout verification and GitHub CI have **not** been performed; CI remains deferred beyond the portfolio MVP.
+- Multi-user installation, version consistency, fresh-checkout reproducibility, packaging and release procedures remain untested or incompletely documented. Successful multi-user deployment is a comparison topic, **not** an additional portfolio MVP blocker.
 - Edge-case coverage and SEC-001 enforcement are incomplete.
-- The reported header-only test validates schema acceptance on empty synthetic files, **not** populated association behavior or malformed-input handling.
+- The reported header-only test validates empty synthetic schema acceptance. Separate committed Python tests exercise populated association references and invalid schemas; this is not exhaustive malformed-input or security testing.
 - No scheduled execution, persistent issue register, reviewer approval workflow, email notification or resolution tracking is currently claimed.
 
 ## Product discovery and change control
