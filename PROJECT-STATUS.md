@@ -21,9 +21,10 @@ Use a ChatGPT Skill to orchestrate deterministic Python CRM auditing and AI expl
 Equivalent business-rule and reporting scope to Variant 1, with architecture-specific integration: FastAPI/Open WebUI/Podman versus ChatGPT Skill/Python. Comprehensive freshness, close-date reconciliation, missing-association inference from partial exports, customer-specific rule expansion, GitHub CI, load tests, hardened deployment, scheduled audits, notifications, and commercial readiness are deferred. Multi-user capability is a **comparison criterion**, not a required successful multi-user deployment for portfolio MVP acceptance.
 
 ## Next tiny action
-Continue the GitHub documentation review, then create ChatGPT-facing Skill user/execution documentation covering synthetic input preparation, invocation, result interpretation, errors and limitations. Fresh-checkout regression execution is user-confirmed; preserve the absence of raw logs as an evidence limitation.
+Review the GitHub-authored [ChatGPT Skill user guide](docs/chatgpt-skill-user-guide.md) and two-variant [portfolio case study](https://github.com/fit2grow-DataNinja/ai-services-portfolio/blob/main/case-studies/S02-crm-data-quality-auditor.md) for final reviewer sign-off. GitHub remains the authoritative documentation source; reproduce approved guidance in ChatGPT without creating conflicting copies. Fresh-checkout regression execution is user-confirmed, but raw logs remain unavailable.
 
 ## References
+- [ChatGPT Skill user guide](docs/chatgpt-skill-user-guide.md)
 - [Definition of done](docs/definition-of-done.md)
 - [Validation](docs/validation.md)
 - [Future improvements and commercial readiness](docs/future-improvements-and-commercial-readiness.md)
