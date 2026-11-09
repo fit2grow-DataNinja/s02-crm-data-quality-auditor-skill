@@ -1,6 +1,6 @@
 # Installation, execution prerequisites and distribution — Variant 2
 
-**Status:** An installed ChatGPT Skill has executed synthetic CRM audits and the GitHub source is version-controlled. Fresh-checkout Python tests were **user-confirmed successful**. Installation by a second user, packaging/distribution procedures and shared version governance are **untested**.
+**Status:** An installed ChatGPT Skill has executed synthetic CRM audits and the GitHub source is version-controlled. Fresh-checkout Python tests were **user-confirmed successful**. Execution by a second ChatGPT user with matching deterministic results is **user-confirmed**. Documented installation steps, packaging/distribution procedures and shared version governance remain **untested or unrecorded**.
 
 ## Source layout
 - `skill/s02-crm-auditor/SKILL.md` — invocation and safe-execution instructions.
