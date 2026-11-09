@@ -10,3 +10,7 @@ Run only on explicitly synthetic CSV attachments. SEC-001 is not implemented: ne
 Resolve actual attachment paths; do not reconstruct file contents from chat. Require contacts and deals files. Associations are optional. Use `python3` to execute `scripts/run_audit.py --contacts <path> --deals <path> [--associations <path>] --output <directory>` from the installed skill directory. Report the exact command, exit code, stdout and stderr. Do not fabricate results or replace script execution with model judgment.
 
 Python output is authoritative for issue counts, IDs, severities and coverage. Explain only the produced findings. State when association, freshness, or close-date checks are unavailable. Pilot policies are provisional. If execution fails, report the error and do not claim an audit succeeded.
+
+## Supporting documentation
+
+For questions about preparing synthetic CSV files, using this Skill, interpreting computed reports, or troubleshooting, consult `references/user-guide.md`. The guide is supporting documentation, not an alternative audit engine. Its relative links to other repository documents refer to the GitHub source tree and may not resolve inside the installed Skill. For actual audits, follow the Python execution contract above; never infer or fabricate findings from the guide.
