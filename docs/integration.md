@@ -1,6 +1,6 @@
 # ChatGPT Skill integration — Variant 2
 
-**Status:** The installed Skill has been exercised with explicitly synthetic CSVs. Populated audit/parity results and a successful fresh-checkout 17-test regression execution have been reported by the project owner. Multi-user installation and centrally controlled versions have **not** been verified.
+**Status:** The installed Skill has been exercised with explicitly synthetic CSVs. Populated audit/parity results and a successful fresh-checkout 17-test regression execution have been reported by the project owner. Successful second-user Skill execution with matching audit results has been confirmed by the owner. Centrally controlled version updates and repeatable installation procedures have **not** been verified.
 
 ## Supported execution flow
 1. Make sure the `s02-crm-auditor` Skill is available in the current ChatGPT environment. Availability and installation mechanisms vary; do not assume it is installed for other users.
