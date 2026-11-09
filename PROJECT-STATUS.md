@@ -1,6 +1,6 @@
 # S02 Variant 2 — Project status
 
-**Stage:** Synthetic portfolio MVP implementation and comparison evidence; documentation alignment in progress. **Data boundary:** explicitly synthetic CRM CSVs only. **Not production-ready.**
+**Stage:** Portfolio MVP complete and closed (2026-11-09), based on documented implementation and user-confirmed evaluation evidence. **Data boundary:** explicitly synthetic CRM CSVs only. **Not production-ready.**
 
 ## Goal and architecture
 Use a ChatGPT Skill to orchestrate deterministic Python CRM auditing and AI explanation. Compare with the accepted Variant 1 FastAPI/Open WebUI implementation using shared synthetic inputs and rule criteria, without modifying Variant 1.
@@ -17,11 +17,14 @@ Use a ChatGPT Skill to orchestrate deterministic Python CRM auditing and AI expl
 - Second-user Skill execution and deterministic-result consistency are **user-confirmed**. Documented installation steps, centrally enforced version/update alignment, and independently captured fresh-checkout logs remain **untested or unrecorded**. AI explanation fidelity is not guaranteed by Skill instructions.
 - SEC-001 sensitivity and approval enforcement are **not implemented**. No real customer CRM data or production claims.
 
+## MVP closure (2026-11-09)
+Both S02 variants are accepted as completed synthetic-data portfolio MVPs. Variant 2 has version-controlled deterministic audit code, a 17-case regression suite, reported populated-scenario issue-level parity, user-confirmed fresh-checkout execution and second-user reuse. The approved user guide is bundled in GitHub; the owner manually added it to the installed Skill and supplied a successful documentation-only response citing `user-guide.md` without running an audit. See [validation](docs/validation.md) for the exact evidence and limitations. Closure is a portfolio-scope decision, not independent reproduction or commercial release authorization.
+
 ## MVP boundary and deferred work
 Equivalent business-rule and reporting scope to Variant 1, with architecture-specific integration: FastAPI/Open WebUI/Podman versus ChatGPT Skill/Python. Comprehensive freshness, close-date reconciliation, missing-association inference from partial exports, customer-specific rule expansion, GitHub CI, load tests, hardened deployment, scheduled audits, notifications, and commercial readiness are deferred. Multi-user capability is a **comparison criterion**, not a required successful multi-user deployment for portfolio MVP acceptance.
 
-## Next tiny action
-Review the GitHub-authored [ChatGPT Skill user guide](docs/chatgpt-skill-user-guide.md) and two-variant [portfolio case study](https://github.com/fit2grow-DataNinja/ai-services-portfolio/blob/main/case-studies/S02-crm-data-quality-auditor.md) for final reviewer sign-off. GitHub remains the authoritative documentation source; reproduce approved guidance in ChatGPT without creating conflicting copies. Fresh-checkout regression execution is user-confirmed, but raw logs remain unavailable.
+## Post-MVP status
+No further development or testing is required for the defined portfolio MVP. Optional improvements, including Approach B GitHub-to-ChatGPT packaging/publishing, are deferred and must be separately scoped and approved. GitHub remains the documentation authority.
 
 ## References
 - [ChatGPT Skill user guide](docs/chatgpt-skill-user-guide.md)
