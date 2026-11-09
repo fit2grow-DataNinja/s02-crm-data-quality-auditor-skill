@@ -1,6 +1,6 @@
 interface:
   display_name: S02 CRM Data Quality Auditor
-  short_description: Deterministic synthetic CRM CSV audit
+  short_description: Find data-quality issues in synthetic CRM exports
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:
