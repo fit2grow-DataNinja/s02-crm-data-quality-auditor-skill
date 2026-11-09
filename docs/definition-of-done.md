@@ -8,12 +8,12 @@
 - [x] Matching rule IDs, severities, issue-level findings, and coverage were reported on the shared synthetic 202/121/92 scenario; clean-checkout parity remains unverified.
 - [x] Header-only, missing/invalid schema, core rules and optional association behavior have regression coverage; a local 17-test pass was reported.
 - [x] Evaluated rules and unavailable association/freshness/close-date checks are explicit in the audit output design and earlier exercises.
-- [ ] Record a consolidated end-to-end ChatGPT demonstration with clear separation of deterministic output and model explanation, suitable for final reviewer sign-off.
-- [ ] Complete comparison evidence and review/update the shared portfolio S02 case study.
+- [x] Accept the recorded end-to-end synthetic ChatGPT audit demonstrations and Python-owned findings as the portfolio demonstration evidence. No new consolidated transcript was independently captured; the earlier demonstrations and their limitations are documented in [validation](validation.md).
+- [x] Complete the documented two-variant comparison and close the shared portfolio S02 case study on the available evidence, explicitly retaining untested areas.
 
 **Comparison criterion, not an MVP blocker:** Evaluate multi-user installation, distribution, version alignment, deterministic consistency and explanation variability when feasible. Record untested capabilities explicitly; do **not** require successful multi-user deployment to claim synthetic portfolio MVP acceptance. Fresh-checkout test execution remains a recommended reproducibility checkpoint.
 
-**Acceptance status:** Not declared complete by this document update. Checked items identify reported or source-backed evidence, not a new execution or production validation.
+**Acceptance status (2026-11-09): Portfolio MVP accepted and closed for Variant 2, alongside the previously accepted Variant 1.** Checked items refer to source-backed or user-reported evidence, not newly observed executions. The previously open demonstration and comparison review items are closed by portfolio-scope acceptance of the documented evidence, not by claiming new tests or an independent end-to-end transcript. No production-readiness claim.
 
 ## Explicitly out of scope for both variants' portfolio MVP
 Real customer CRM data; SEC-001 sensitivity classification, approval and fail-closed enforcement; commercial/production deployment; comprehensive freshness and close-date reconciliation; inference of missing associations from partial exports; additional customer-specific CRM rules; GitHub Actions CI; load/performance testing; hardened operational deployment; scheduled audits, notifications and automated remediation.
