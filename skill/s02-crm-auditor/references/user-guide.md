@@ -25,14 +25,14 @@ You need two CSV files and may add a third:
 | Deals | Yes | `Record ID`, `Deal Name`, `Deal Stage`, `Amount` |
 | Associations | No | `Deal Record ID`, `Contact Record ID` |
 
-The `Deal owner` deal column is optional in the input schema but is used to evaluate missing owners according to the provisional rule. For an empty-input trial, download or copy the repository's [synthetic header-only templates](../skill/s02-crm-auditor/assets/templates/). Header-only files produce no record-level findings; that does **not** validate populated CRM data quality.
+The `Deal owner` deal column is optional in the input schema but is used to evaluate missing owners according to the provisional rule. For an empty-input trial, download or copy the repository's [synthetic header-only templates](../assets/templates/). Header-only files produce no record-level findings; that does **not** validate populated CRM data quality.
 
 Preserve CSV headers exactly. Never replace missing user inputs with model-generated records.
 
 ## 3. Access the Skill
 The project owner **shared `s02-crm-auditor` directly through ChatGPT** with a second user, who successfully executed it and obtained matching deterministic audit results (user-confirmed). This demonstrates practical cross-user sharing and execution for the tested setup. Exact interface steps, workspace permissions and centrally managed updates/version alignment have not been recorded or established. If the Skill is unavailable, ask the owner to share access through the supported ChatGPT interface; a GitHub URL alone does not install the Skill.
 
-For developers, the version-controlled implementation is [`skill/s02-crm-auditor/`](../skill/s02-crm-auditor/). The developer prerequisites and unverified distribution areas are in [deployment.md](deployment.md).
+For developers, the version-controlled implementation is [`skill/s02-crm-auditor/`](../). The developer prerequisites and unverified distribution areas are in [deployment.md](../../../docs/deployment.md).
 
 ## 4. Run an audit in ChatGPT
 1. Start a conversation in the environment that has the installed Skill.
@@ -75,16 +75,16 @@ If an associations file is supplied, the Skill checks reference IDs that **appea
 ## 7. Repeating and comparing runs
 Use exactly the same explicitly synthetic input versions and Python rule version; compare rule IDs, record-level issues, severity and coverage. Run timestamps can legitimately differ. AI explanations may vary between conversations even when the deterministic result is identical.
 
-Previously reported evidence: 202 contacts, 121 deals, 92 medium missing-owner findings in the shared synthetic scenario, with issue-level parity against Variant 1; header-only three-file execution produced zero issues; the owner also confirmed successful execution of a 17-test suite from a fresh repository checkout. **Second-user Skill execution with matching audit results has been confirmed by the owner; centrally managed version updates and documented installation procedures have not been verified.** See [validation.md](validation.md).
+Previously reported evidence: 202 contacts, 121 deals, 92 medium missing-owner findings in the shared synthetic scenario, with issue-level parity against Variant 1; header-only three-file execution produced zero issues; the owner also confirmed successful execution of a 17-test suite from a fresh repository checkout. **Second-user Skill execution with matching audit results has been confirmed by the owner; centrally managed version updates and documented installation procedures have not been verified.** See [validation.md](../../../docs/validation.md).
 
 ## 8. Scope and related documentation
 This is a **synthetic portfolio MVP**, not a production service. GitHub CI, commercial security, full freshness/close-date logic, scheduled jobs, notification workflows and CRM write-back are intentionally deferred. Do not claim SEC-001 protection or real-customer-data clearance.
 
-- [ChatGPT integration and command details](integration.md)
-- [Skill installation and distribution limits](deployment.md)
-- [Rule scope and artifacts](service-specification.md)
-- [Validation and evidence limitations](validation.md)
-- [Variant 1 versus Variant 2 comparison](variant-comparison.md)
+- [ChatGPT integration and command details](../../../docs/integration.md)
+- [Skill installation and distribution limits](../../../docs/deployment.md)
+- [Rule scope and artifacts](../../../docs/service-specification.md)
+- [Validation and evidence limitations](../../../docs/validation.md)
+- [Variant 1 versus Variant 2 comparison](../../../docs/variant-comparison.md)
 - [Single S02 business use-case and two-variant case study](https://github.com/fit2grow-DataNinja/ai-services-portfolio/blob/main/case-studies/S02-crm-data-quality-auditor.md)
 
 **Documentation ownership:** This user guide is source-controlled in GitHub. ChatGPT-side guidance should be based on this file; avoid creating an unversioned, conflicting copy.
