@@ -11,4 +11,6 @@
 | **Multi-user reusability and consistency** | Installation/distribution, shared version pinning, upgrade flow, identical findings across users, explanation differences |
 | Reproducibility | Another user can follow documented setup and rerun identical synthetic cases |
 
+**Recorded cross-user evidence:** The project owner confirmed that a second ChatGPT user successfully ran the Skill and received the same deterministic audit results. This is user-reported multi-user reusability evidence; exact installation procedure, Skill version hashes, centrally governed updates and independent run transcripts were not supplied. Do not describe cross-user use as entirely untested.
+
 **Fairness note:** Sharing a deterministic Python engine compares orchestration/integration rather than independent rule-engine correctness. Track exact sample versions and rule versions; do not equate similar AI wording with deterministic consistency. Do not claim a multi-user test was performed without evidence.
