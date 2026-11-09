@@ -11,10 +11,10 @@ Use a ChatGPT Skill to orchestrate deterministic Python CRM auditing and AI expl
 - Audit findings are Python-owned; the model may explain but not invent them. No live CRM connection or write capability is part of the implementation.
 
 ## Evidence and limitations
-- Earlier synthetic audit/parity exercises reported **202 contacts, 121 deals, 92 medium missing-deal-owner findings**, with issue-level parity and matching results in two ChatGPT conversations.
+- Earlier synthetic audit/parity exercises reported **202 contacts, 121 deals, 92 medium missing-deal-owner findings**, with issue-level parity and matching results in two ChatGPT conversations. The owner also confirms successful execution by a **second ChatGPT user** with matching audit results.
 - The header-only three-template execution was reported successful: zero records and issues, all outputs created, partial-reference association coverage.
 - Previous local regression-suite execution was reported as **17 tests passed, 0 failures/errors**. The owner subsequently **confirmed successful execution of the regression suite from a fresh Variant 2 GitHub checkout** (2026-11-08). This is user-reported completion, not an assistant-observed run; the exact fresh-checkout log, environment and commit SHA were not supplied. See [validation](docs/validation.md).
-- Multi-user installation, sharing, version alignment, and independently captured fresh-checkout evidence remain **untested or unrecorded**. AI explanation fidelity is not guaranteed by Skill instructions.
+- Second-user Skill execution and deterministic-result consistency are **user-confirmed**. Documented installation steps, centrally enforced version/update alignment, and independently captured fresh-checkout logs remain **untested or unrecorded**. AI explanation fidelity is not guaranteed by Skill instructions.
 - SEC-001 sensitivity and approval enforcement are **not implemented**. No real customer CRM data or production claims.
 
 ## MVP boundary and deferred work
