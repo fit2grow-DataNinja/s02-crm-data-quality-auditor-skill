@@ -30,6 +30,7 @@ Do not treat proposed functionality as implemented, or a passing MVP test as com
 
 | Candidate | Intended value | Lightweight implementation principle | Acceptance evidence needed |
 | --- | --- | --- | --- |
+| Approach B: GitHub-to-ChatGPT Skill publishing | Keep the approved GitHub user guide authoritative while reducing manual package drift; **deferred beyond portfolio MVP** | On approved merge or manual release, copy `docs/chatgpt-skill-user-guide.md` to Skill `references/user-guide.md`, compare contents, package the full Skill; publish manually unless a supported update interface exists | Verified package contents and documented, authorized update/rollback procedure; no automatic ChatGPT publishing assumed |
 | GitHub CI regression automation | Run existing Python tests on code changes; **deferred beyond portfolio MVP, as in Variant 1** | Minimal GitHub Actions workflow using standard-library unittest | Passing clean-checkout CI run and maintained workflow |
 | Versioned configurable business rules | Adapt rules, stages, severities and thresholds to a customer | Small validated configuration file; explicit defaults; no arbitrary executable rules | Repeatable tests showing rule changes and explainable outcomes |
 | Structured, actionable issue register | Make findings easy to identify, review and resolve | Stable issue IDs, record references, rule ID, severity, evidence, run timestamp, reviewer state; simple export first | Sample review workflow tested with synthetic cases |
@@ -79,11 +80,14 @@ Commercial release requires evidence for the applicable gates; a roadmap entry o
 **Scope parity:** Variant 1 and Variant 2 target the same synthetic CRM audit business rules, record-level outputs, and coverage disclosures. Variant 1's FastAPI/Open WebUI/Podman integration and Variant 2's Skill/Python runtime have different technical validation needs. Neither variant requires GitHub CI, production hardening, comprehensive freshness/close-date reconciliation, or full association completeness inference for portfolio MVP acceptance.
 
 - The installed Skill implementation (instructions, Python scripts, agent metadata, icon) and three header-only templates have been committed to the Variant 2 repository.
-- Synthetic unit/regression tests are committed (17 cases across header-only and rule/CLI coverage); a prior local 17-test pass was reported. Independent fresh-checkout verification and GitHub CI have **not** been performed; CI remains deferred beyond the portfolio MVP.
-- Multi-user installation, version consistency, fresh-checkout reproducibility, packaging and release procedures remain untested or incompletely documented. Successful multi-user deployment is a comparison topic, **not** an additional portfolio MVP blocker.
+- Synthetic unit/regression tests are committed (17 cases across header-only and rule/CLI coverage); a prior local 17-test pass was reported. Fresh-checkout regression execution was user-confirmed, without raw logs, tested SHA or environment details; GitHub CI has **not** been performed and remains deferred beyond the portfolio MVP.
+- A second ChatGPT user successfully ran the Skill with matching results (owner-confirmed), and the owner confirmed a fresh-checkout test run. Centrally aligned Skill versions, automated packaging/publishing, and repeatable installation/release procedures remain untested or incompletely documented. Successful multi-user deployment is a comparison topic, **not** an additional portfolio MVP blocker.
 - Edge-case coverage and SEC-001 enforcement are incomplete.
 - The reported header-only test validates empty synthetic schema acceptance. Separate committed Python tests exercise populated association references and invalid schemas; this is not exhaustive malformed-input or security testing.
 - No scheduled execution, persistent issue register, reviewer approval workflow, email notification or resolution tracking is currently claimed.
+
+## Portfolio closure
+S02 Variant 2's synthetic portfolio MVP was closed on 2026-11-09 alongside Variant 1. This backlog remains open only for separately approved post-MVP improvements; none of its entries is a condition of the completed MVP. See [project status](../PROJECT-STATUS.md) and [validation](validation.md).
 
 ## Product discovery and change control
 
