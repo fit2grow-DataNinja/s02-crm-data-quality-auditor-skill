@@ -1,6 +1,6 @@
 # S02 — CRM Data Quality Auditor (ChatGPT Skill / Variant 2)
 
-**Status:** Synthetic-data-only Skill implementation and Python regression tests are version-controlled; audit and parity exercises have been reported. Independent fresh-checkout and multi-user reproducibility remain unverified. **Not production-ready.**
+**Status:** **Portfolio MVP complete and closed (2026-11-09).** Deterministic synthetic-data Skill implementation, regression tests, reported parity and user-confirmed cross-user reuse are documented. Independent execution transcripts and centrally governed version updates remain unavailable or unverified. **Not production-ready.**
 
 This project implements a reusable ChatGPT Skill that invokes **deterministic Python CRM CSV validation** and asks AI to explain—not invent—the findings. It is compared with the [accepted Variant 1 FastAPI/Open WebUI auditor](https://github.com/fit2grow-DataNinja/s02-crm-data-quality-auditor).
 
@@ -22,6 +22,6 @@ No real CRM data, live CRM connection/write, SEC-001 enforcement, complete fresh
 ## Test command
 From repository root: `python3 -m unittest discover -s tests -v`. See [validation](docs/validation.md) for evidence limitations.
 
-The shared [S02 portfolio case study](https://github.com/bb-DataNinja/ai-services-portfolio/blob/main/case-studies/S02-crm-data-quality-auditor.md) is maintained separately.
+The shared [S02 portfolio case study](https://github.com/fit2grow-DataNinja/ai-services-portfolio/blob/main/case-studies/S02-crm-data-quality-auditor.md) is maintained separately.
 
-**Next:** Verify the committed Skill and test suite from a fresh repository checkout using explicitly synthetic inputs.
+**Closure:** The owner confirmed successful fresh-checkout regression execution and documentation access in the installed Skill; see the [validation record](docs/validation.md) for evidence boundaries. The GitHub-to-ChatGPT publishing workflow (Approach B) and CI remain deferred improvements, not MVP requirements.
