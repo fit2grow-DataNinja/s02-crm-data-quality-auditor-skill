@@ -15,6 +15,11 @@
 ## Fresh-checkout regression confirmation (user-reported, 2026-11-08)
 The project owner explicitly confirmed that running the 17-test Python regression suite from a fresh Variant 2 repository checkout was **successfully executed**. Treat the fresh-checkout regression checkpoint as **completed on user confirmation**, not as an independently observed execution by the assistant. The prior local run was reported as 17 passed with 0 failures/errors; the fresh-checkout run's exact stdout/stderr, exit code, Python version, checkout commit SHA, and per-test transcript were **not supplied**, so do not invent or attribute those details to it. Command intended for this checkpoint: `python3 -m unittest discover -s tests -v`. No GitHub Actions CI was executed.
 
+## Skill documentation integration (user-reported, 2026-11-09)
+The approved GitHub user guide was copied into `skill/s02-crm-auditor/references/user-guide.md`, and `SKILL.md` was updated to direct documentation questions to it. A complete updated Skill ZIP was prepared. During the manual update of the existing ChatGPT Skill, the editor's folder-upload operation imported the guide file at the Skill's top level rather than preserving the `references/` folder. The owner confirmed saving the installed `SKILL.md` with a corresponding `user-guide.md` reference. This installed layout differs from the version-controlled package but does not change the auditor.
+
+The owner then supplied the response to a documentation-only prompt in a new Skill-enabled conversation. The response correctly listed contacts and deals as required, associations as optional, all required headers, the optional `Deal owner` column, and synthetic-only restrictions. It explicitly stated that it consulted `s02-crm-auditor/user-guide.md` (section 2) and did not execute the Python audit. **Result: documentation access and answer consistency passed on user-reported evidence.** The assistant did not independently inspect the Skill runtime or execution trace. This checkpoint does not validate centrally managed updates, ZIP-based replacement of an installed Skill, or audit execution.
+
 ## Coverage and evidence boundaries
 - Tests target synthetic empty/valid/invalid input, record IDs, email, deal name, stage, amount, owner, association references, and CLI artifacts.
 - Freshness and original close-date reconciliation cannot be evaluated without required source metadata; partial association files cannot justify missing-link inference.
@@ -22,5 +27,5 @@ The project owner explicitly confirmed that running the 17-test Python regressio
 - Fresh-checkout regression execution is user-confirmed; independent transcript-level reproduction, repeatable installation procedures, centrally managed version/update governance across users, negative security enforcement, explanation-faithfulness assessment, and CI are unverified or deferred.
 - **SEC-001 is not implemented; synthetic data only.** The presence of tests is not production clearance.
 
-## Next documentation task
-Complete the GitHub technical documentation, then prepare ChatGPT-facing instructions from the Skill user/execution perspective: access or installation (distinguishing unverified sharing), synthetic CSV preparation, invocation, report interpretation, error handling, and safety boundaries. If raw fresh-checkout execution logs later become available, append them without changing the user-confirmed status.
+## Documentation checkpoint
+The ChatGPT-facing user guide and its manual documentation-access verification are complete for the Variant 2 MVP on user-reported evidence. If raw fresh-checkout execution logs later become available, append them without changing the user-confirmed status.
