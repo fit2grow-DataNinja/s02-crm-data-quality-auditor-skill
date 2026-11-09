@@ -1,12 +1,20 @@
 # ChatGPT Skill user guide — S02 Variant 2 (synthetic data only)
 
 **Audience:** Person running the S02 CRM auditor in an eligible ChatGPT environment.  
-**Status:** Documented from the version-controlled Skill instructions and previously reported synthetic executions. Exact installation/sharing UI steps and multi-user version management are **not yet verified**.
+**Status:** Based on the version-controlled Skill instructions and reported synthetic executions. The project owner confirmed direct sharing through ChatGPT and successful execution by a second ChatGPT user with matching deterministic results. Exact UI steps, centrally governed updates and version management are **not documented or verified**.
 
 ## 1. What the Skill does
 The `s02-crm-auditor` Skill checks explicitly synthetic CRM CSV exports using executable deterministic Python rules. ChatGPT can explain the generated findings, but **Python—not the model—determines issue IDs, severity, counts and coverage**. No live CRM connection, record updates, or email notifications are provided.
 
 Use **synthetic files only**. The SEC-001 sensitivity and manual-approval gate has not been implemented. **Do not upload real customer or sensitive CRM data.**
+
+## Getting started in ChatGPT (quick start)
+1. Access the Skill shared with you directly through ChatGPT. The project owner has confirmed this sharing method worked for a second user; specific interface clicks may differ and have not been recorded.
+2. Attach **explicitly synthetic** contacts and deals CSV exports; an associations CSV is optional. See the exact required headers below.
+3. Ask: **"Run the S02 CRM Data Quality Auditor on my attached synthetic contacts and deals CSV files. Summarize the findings, their severity, and any checks that could not be performed."**
+4. Review the summary and the generated `summary.json`, `issues.csv` and `report.md` outputs. A zero-finding result does not establish that all possible CRM data-quality checks passed.
+
+**Safety:** Never provide real customer or sensitive CRM data. This is a synthetic-data portfolio MVP, not a production service.
 
 ## 2. Prepare the synthetic inputs
 You need two CSV files and may add a third:
@@ -22,7 +30,7 @@ The `Deal owner` deal column is optional in the input schema but is used to eval
 Preserve CSV headers exactly. Never replace missing user inputs with model-generated records.
 
 ## 3. Access the Skill
-Use a ChatGPT environment in which `s02-crm-auditor` has already been installed or otherwise made available and can execute its Python scripts and read attachments. **The exact ChatGPT installation, publishing, sharing, workspace permission and version-pinning steps have not been established by a documented multi-user test.** If the Skill is unavailable, request access through the supported Skill installation/distribution path for your environment; do not assume a repository URL alone installs it.
+The project owner **shared `s02-crm-auditor` directly through ChatGPT** with a second user, who successfully executed it and obtained matching deterministic audit results (user-confirmed). This demonstrates practical cross-user sharing and execution for the tested setup. Exact interface steps, workspace permissions and centrally managed updates/version alignment have not been recorded or established. If the Skill is unavailable, ask the owner to share access through the supported ChatGPT interface; a GitHub URL alone does not install the Skill.
 
 For developers, the version-controlled implementation is [`skill/s02-crm-auditor/`](../skill/s02-crm-auditor/). The developer prerequisites and unverified distribution areas are in [deployment.md](deployment.md).
 
