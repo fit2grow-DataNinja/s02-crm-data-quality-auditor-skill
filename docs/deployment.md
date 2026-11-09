@@ -27,3 +27,6 @@ A future distribution acceptance exercise should record: installation method, Sk
 Variant 2 invokes Python from the Skill runtime. It does not require the separate FastAPI server, multipart HTTP adapter, Open WebUI setup, or Podman network steps used in Variant 1.
 
 **Synthetic only:** No real customer CRM data. SEC-001 sensitivity classification and approval enforcement are not implemented. No production-readiness claim.
+
+## Deferred improvement: GitHub-to-ChatGPT publishing (Approach B)
+Future enhancement only; **not a Variant 2 MVP acceptance criterion** and not required for Variant 1 parity. Maintain the approved user guide in `docs/chatgpt-skill-user-guide.md` as the single authoritative source. On an approved change merged to `main` (or a manually invoked release trigger), a proposed GitHub Actions workflow would copy it into `skill/s02-crm-auditor/references/user-guide.md`, verify identical content, and build a complete Skill ZIP. Publishing that ZIP or updating the existing ChatGPT Skill remains a manual step unless a supported authenticated update interface is established. No CI workflow, automatic publication, or cross-user update propagation has been implemented or tested.
