@@ -67,7 +67,7 @@ If an associations file is supplied, the Skill checks reference IDs that **appea
 ## 7. Repeating and comparing runs
 Use exactly the same explicitly synthetic input versions and Python rule version; compare rule IDs, record-level issues, severity and coverage. Run timestamps can legitimately differ. AI explanations may vary between conversations even when the deterministic result is identical.
 
-Previously reported evidence: 202 contacts, 121 deals, 92 medium missing-owner findings in the shared synthetic scenario, with issue-level parity against Variant 1; header-only three-file execution produced zero issues; the owner also confirmed successful execution of a 17-test suite from a fresh repository checkout. **Multi-user installation, version alignment and repeatability across accounts have not been tested.** See [validation.md](validation.md).
+Previously reported evidence: 202 contacts, 121 deals, 92 medium missing-owner findings in the shared synthetic scenario, with issue-level parity against Variant 1; header-only three-file execution produced zero issues; the owner also confirmed successful execution of a 17-test suite from a fresh repository checkout. **Second-user Skill execution with matching audit results has been confirmed by the owner; centrally managed version updates and documented installation procedures have not been verified.** See [validation.md](validation.md).
 
 ## 8. Scope and related documentation
 This is a **synthetic portfolio MVP**, not a production service. GitHub CI, commercial security, full freshness/close-date logic, scheduled jobs, notification workflows and CRM write-back are intentionally deferred. Do not claim SEC-001 protection or real-customer-data clearance.
